@@ -1,12 +1,10 @@
 /*
- Name: Alex Yuk
- Date: 10/22
-
-
- /2019
- Description:
- Solves the Eight Queens problem
+Name: Alex Yuk
+Date: 10/22/2019
+File: Eight Queens Problem With Memoization
  */
+
+import edu.princeton.cs.algs4.StdIn;
 
 import java.util.ArrayList;
 
@@ -14,9 +12,14 @@ public class EightQueensProblem {
 
     // N*N board
     // Numbers above 17 take a while
-    private static final int N = 9;
+    private static int N = 9;
 
-    public static void main(String[] args) { solveQueens(); }
+    public static void main(String[] args) {
+        System.out.print("Enter Board Size\n? ");
+        N = StdIn.readInt();
+
+        solveQueens();
+    }
 
     // Solves the eight queens problem
     private static void solveQueens() {

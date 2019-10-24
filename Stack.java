@@ -1,7 +1,7 @@
 /*
 Name: Alex Yuk
-File: Standard Iterable Stack
-Date: 10/16/19
+Date: 10/22/2019
+File: Iterable Stack
  */
 
 import java.util.Iterator;
@@ -30,7 +30,7 @@ public class Stack<T> implements Iterable<T> {
         T top_element = this.top.element;
         this.top = this.top.next;
 
-        return this.top.element;
+        return top_element;
     }
 
     public T peek() {

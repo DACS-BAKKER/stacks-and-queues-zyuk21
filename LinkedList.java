@@ -1,7 +1,7 @@
 /*
 Name: Alex Yuk
+Date: 10/22/2019
 File: Iterable LinkedList
-Date: 10/16/29
  */
 
 import java.util.Iterator;

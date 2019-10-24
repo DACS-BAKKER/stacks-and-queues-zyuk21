@@ -1,7 +1,7 @@
 /*
 Name: Alex Yuk
 File: Josephus Problem
-Date: 10/16/19
+Date: 10/22/19
  */
 
 import edu.princeton.cs.algs4.StdIn;
@@ -16,6 +16,7 @@ public class JosephusProblem {
         int S = StdIn.readInt();
 
         System.out.println("You will survive if you sit at position " + solveForSurvival(N,S));
+        System.out.println("You will survive if you sit at position (Recursion) " + solveForSurvivalRecursive(N,S));
     }
 
     public static int solveForSurvival(int N, int S) {
@@ -43,6 +44,14 @@ public class JosephusProblem {
         return final_position;
     }
 
-
+    // Recursion for Josephus problem
+    private static int solveForSurvivalRecursive(int N, int S) {
+        // Base case: When one person left, they survive
+        if (N == 1)
+            return 1;
+        // Step case: Survivor from n-1 and add onto people skipped and mod for index of current survivor
+        else
+            return (solveForSurvivalRecursive(N - 1, S) + S - 1) % N + 1;
+    }
 
 }

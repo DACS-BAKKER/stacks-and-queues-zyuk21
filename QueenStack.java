@@ -3,9 +3,6 @@ Name: Alex Yuk
 Description: Specialized Stacked Created for Memoization Eight Queens
  */
 
-import java.util.ArrayList;
-import java.util.Iterator;
-
 public class QueenStack {
 
     private QueenNode top;
@@ -46,7 +43,4 @@ public class QueenStack {
     public boolean isEmpty() {
         return this.top == null;
     }
-
-
-
 }
